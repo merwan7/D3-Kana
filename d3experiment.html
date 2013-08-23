@@ -1,0 +1,133 @@
+<script src="d3.v2.min.js"></script>
+<html>
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+
+    <!--script>document.write('<script src="http://' + '192.168.1.6'.split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script-->
+    <link href="d3kana.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="wrapper">
+        
+
+        <ul class="history" style="display: none !important">
+            <li class="time">0</li>
+        </ul>
+
+        <section class="settings">
+
+          <nav class="controls">
+              <!--label for="type"></label-->
+              <ul class="type">
+                  <li class="active hiragana">Hiragana</li>
+                  <li class="katakana">Katakana</li>
+              </ul>
+              <div style="clear: both"></div>
+              <ul class="key">
+                  <li style="visibility: hidden">&nbsp;</li>
+                  <li class="dash active">-</li>
+                  <li class="k">k</li>
+                  <li class="s">s</li>
+                  <li class="t" style="clear: both">t</li>
+                  <li class="n">n</li>
+                  <li class="h">h</li>
+                  <li class="m">m</li>
+                  <li class="y">y</li>
+                  <li class="r" style="clear:both; margin-left: 1.4em;">r</li>
+                  <li class="w">w</li>
+                  <li class="star">*</li>
+              </ul>
+              <div style="clear: both;"></div>
+              <button>Go!</button>
+          </nav>
+
+
+        </section>
+            
+
+        <svg>
+            <!-- <defs>
+                <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" style="stop-color:rgb(255,255,255);
+                  stop-opacity:0" />
+                  <stop offset="78%" style="stop-color:#bc002d;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#bc002d;stop-opacity:1" />
+                </radialGradient>
+            </defs>
+            <defs>
+                <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="30%" style="stop-color:white;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:white;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:white;stop-opacity:1" />
+                  
+                </radialGradient>
+            </defs>
+
+            <defs>
+                <filter id="dropshadow" height="130%" width="130%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="1"/> 
+                    <feOffset dx="2" dy="2" result="offsetblur"/> 
+                    <feMerge> 
+                      <feMergeNode/> 
+                      <feMergeNode in="SourceGraphic"/> 
+                   </feMerge>
+                </filter>
+            </defs>
+            <defs>
+              <filter id='inner-shadow'>
+                
+                <feOffset
+                  dx='5'
+                  dy='5'
+                />
+                
+                
+                <feGaussianBlur
+                  stdDeviation='3'
+                  result='offset-blur'
+                />
+                
+                
+                <feComposite
+                  operator='out'
+                  in='SourceGraphic'
+                  in2='offset-blur'
+                  result='inverse'
+                />
+                
+                
+                <feFlood
+                  flood-color='black'
+                  flood-opacity='0.75'
+                  result='color'
+                />
+                
+                
+                <feComposite
+                  operator='in'
+                  in='color'
+                  in2='inverse'
+                  result='shadow'
+                />
+                
+                
+                <feComposite
+                  operator='over'
+                  in='shadow'
+                  in2='SourceGraphic'
+                />
+              </filter>
+            </defs> -->
+
+        </svg><br />
+        <div class="dots">&bull;&bull;&bull;</div>
+    </div> <!-- .wrapper -->
+    <script src="d3kana.js"></script>
+</body>
+</html>

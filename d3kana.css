@@ -1,0 +1,234 @@
+/* 
+    Author: merwan rodriguez
+    date: around sept 2012
+    Notes:
+      
+*/
+
+
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Helvetica; 
+}
+label {
+    color: #bc002d;
+    font-weight: bold;
+    font-size: 1.3em;
+    float: left;
+    margin-right: 10px;
+    height: 27px;
+    text-align: bottom;
+    padding-top: 7px;
+
+}
+
+text {
+    font-family: Helvetica; 
+    font-weight: normal; 
+    font-style: normal; 
+    /*text-shadow: 0 0.05em 0em #333; */
+    font-size: 1.2em; 
+    stroke: none;
+    text-anchor: middle;
+    fill: white; /*#bc002d;*/
+}
+
+text.active {
+    fill: #bc002d;
+    /*stroke: none;*/
+}
+
+text.win {
+    /*stroke: #bc002d !important;*/
+    fill: #bc002d;
+    stroke: white;
+    stroke-width: 3;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.touch svg text {
+    stroke: none; /* ipad doesn't handle it well */
+    font-weight: bold;
+}
+
+circle {
+    stroke: white; /*#bc002d;*/
+    stroke-linejoin: butt;  
+    stroke-width: 0;
+    box-shadow: 1em 1em 1em black;
+}
+
+.touch svg circle{
+    stroke-width: 1;
+}
+
+
+svg {
+    /*border: solid 2px white;*/
+    border-radius: 50%; 
+    -webkit-box-shadow: 1px 1px 12px #333;
+    background-color: #bc002d;
+    position: relative;
+
+/*    -webkit-transform: translate(0,0,0);
+    -webkit-animation:pulsate 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transition: all 0.5s ease-in;*/
+    
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    
+}
+
+svg.win {
+   
+}
+
+.touch svg {
+    border: solid 1px white;
+}
+
+.link {
+    stroke: transparent;
+    stroke-width: 2px;
+    z-index: -1
+}
+
+.dots, time {
+    float: left;
+    color: #bc002d;
+    font-size: 1.2em; 
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+nav {
+    width: 220px;
+    height: 150px;
+    margin: 40px auto 0 auto;
+    z-index: 9999;
+}
+
+nav button {
+    border: solid 1px #bc002d;
+    border-radius: 50%;
+    color: #bc002d;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-color: white;
+    padding: 5px;
+    margin: 35px 0 0 90px;
+    display: block;
+
+}
+
+nav ul, nav li {
+    margin: 0; 
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    color: #bc002d;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    float: left;
+    padding: 2px 0;
+
+    width: 30px;
+    margin: 5px 0 -5px 0; 
+
+    border-radius: 3px;
+}
+
+nav ul.type {
+    width: 115px;
+    margin: 0 auto;
+}
+
+nav ul.type li {
+    width: 100%;
+    float: none;
+}
+
+nav ul.key {
+    margin-left: 40px;
+    margin-top: 10px;
+
+}
+
+nav li:hover, nav li.active {
+    background-color: #bc002d;
+    color: white;
+    text-shadow: 0 1px 0 #000;
+}
+
+nav select {
+    border: solid 1px transparent;
+    background-color: white;
+    height: 40px;
+    color: #bc002d;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0 5px;
+
+    font-size: 1.3em;
+    -webkit-appearance: listbox;
+}
+
+nav select:first-child {
+    width: 110px;
+}
+
+ul.history {
+    position: absolute;
+    left: 33%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    top: 100px; 
+}
+
+
+
+.wrapper {
+    width: 100%;
+    height: 720px;
+    padding: 1% 10px;
+    text-align: left;
+    position: relative;
+}
+
+section.settings {
+    position: absolute;
+    border-radius: 50%;
+    width: 285px;
+    background-color: white;
+    height: 285px;
+    z-index: 999;
+    top: 999px;
+    left: 19px;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 12px #333;
+
+    -webkit-transition: top .5s;
+}
+
+section.settings.show {
+    top: 51px;
+}
+
+/*@-webkit-keyframes pulsate 
+{
+    0% {  -webkit-transform: translate(10px, 10px, 10px);  }
+    50% {  -webkit-transform: translate(10px, 20px, 20px);  }
+    100% {    -webkit-transform: translate(10px, 10px, 10px); }
+}*/
